@@ -107,8 +107,8 @@ public class Registration extends JFrame implements ActionListener {
             {
                 try
                 {
-                    Class.forName("oracle.jdbc.driver.OracleDriver");
-                    Connection con = DriverManager.getConnection("jdbc:oracle:thin:@mcndesktop07:1521:xe", "sandeep", "welcome");
+                    Class.forName("com.mysql.jdbc.Driver");
+                    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/user","root","root");
                     PreparedStatement ps = con.prepareStatement("insert into reg values(?,?,?,?,?,?)");
                     ps.setString(1, s1);
                     ps.setString(2, s2);
